@@ -138,10 +138,6 @@ namespace CarPool.App.ViewModels
 
         private async void AcceptRide()
         {
-            //Trace.WriteLine("\n------------------------------- RIDE ACCEPTED -------------------------------------\n");
-            //Trace.WriteLine(selectedUser.Id);
-            //Trace.WriteLine(selectedNewRide.Id);
-            //Trace.WriteLine("\n------------------------------- RIDE ACCEPTED -------------------------------------\n");
 
             if (SelectedNewRide == null)
                 return;
