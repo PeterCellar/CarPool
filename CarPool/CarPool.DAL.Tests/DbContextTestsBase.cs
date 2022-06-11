@@ -9,8 +9,7 @@ public class DbContextTestsBase : IAsyncLifetime
     protected DbContextTestsBase()
     {
 
-        // DbContextFactory = new DbContextTestingInMemoryFactory(GetType().Name, seedTestingData: true);
-        //DbContextFactory = new SqlServerDbContextTestingFactory(GetType().FullName!);
+        
         DbContextFactory = new SqlLiteDbContextFactory(GetType().FullName!, seedTestingData: true);
 
         CarPoolDbContextSUT = DbContextFactory.CreateDbContext();
