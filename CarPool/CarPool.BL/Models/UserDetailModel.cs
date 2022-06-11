@@ -25,7 +25,7 @@ namespace CarPool.BL
         }
 
         public static UserDetailModel Empty => new(string.Empty, string.Empty, string.Empty);
-        // public static RideDetailModel Empty => new(default, default, string.Empty, string.Empty);
+        
     }
 }
 
