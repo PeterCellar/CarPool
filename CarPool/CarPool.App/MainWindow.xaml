@@ -1,0 +1,27 @@
+﻿<Window x:Class="CarPool.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarPool.App"
+        xmlns:viewmodels="clr-namespace:CarPool.App.ViewModels"
+        xmlns:converters="clr-namespace:CarPool.App.Converters"
+        xmlns:views="clr-namespace:CarPool.App.Views" d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <views:Navbar DataContext="{Binding navbarViewModel}" Grid.Row="0"/>
+        <views:PassengerView DataContext="{Binding passengerViewModel}" Grid.Row="1"/>
+        <views:DriverView DataContext="{Binding driverViewModel}" Grid.Row="1"/>
+        <views:ProfileView DataContext="{Binding profileViewModel}" Grid.Row="1"/>
+        <views:LoginView DataContext="{Binding loginViewModel}" Grid.RowSpan="2"/>
+    </Grid>
+
+
+</Window>
