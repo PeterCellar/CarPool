@@ -16,8 +16,7 @@ namespace CarPool.BL.Tests
     {
         protected CRUDFacadeTestsBase()
         {
-            // DbContextFactory = new DbContextTestingInMemoryFactory(GetType().Name, seedTestingData: true);
-            // DbContextFactory = new DbContextLocalDBTestingFactory(GetType().FullName!, seedTestingData: true);
+            
             DbContextFactory = new SqlLiteDbContextFactory(GetType().FullName!, seedTestingData: true);
 
             UnitOfWorkFactory = new UnitOfWorkFactory(DbContextFactory);
